@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+#This is for exiting the console
+
 import cmd
 
 class HBNBCommand(cmd.Cmd):
