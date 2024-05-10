@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+""" For quiting the console """
+
 import cmd
 
 class HBNBCommand(cmd.Cmd):
