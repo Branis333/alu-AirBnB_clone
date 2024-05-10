@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import cmd
 
+#This is for exiting the console
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
