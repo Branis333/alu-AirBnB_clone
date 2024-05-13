@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import sys
-sys.path.append(/models/to/base_model)
+sys.path.append("/models/to/base_model")
 import unittest
-from base_model import BaseModel
+from models import base_model
 import datetime
 import uuid
 
