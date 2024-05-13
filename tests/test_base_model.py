@@ -1,11 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 import sys
 sys.path.append("path_to_parent_directory")
 import unittest
-from base_model import BaseModel
 import datetime
 import uuid
 
+from models import 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
         self.base_model = BaseModel()
