@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-sys.path.append("/models/to/base_model")
+sys.path.append("path_to_parent_directory")
 import unittest
 from base_model import BaseModel
 import datetime
