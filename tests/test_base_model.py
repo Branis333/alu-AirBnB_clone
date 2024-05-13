@@ -1,11 +1,10 @@
 #!/usr/bin/python3
+import sys
+sys.path.append(/models/to/base_model)
 import unittest
+from base_model import BaseModel
 import datetime
 import uuid
-
-import sys
-sys.path.append(models/base_model.py)
-import base_model
 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
