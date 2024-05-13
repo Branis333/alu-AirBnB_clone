@@ -2,7 +2,7 @@
 import sys
 sys.path.append("/models/to/base_model")
 import unittest
-from models import base_model
+from base_model import BaseModel
 import datetime
 import uuid
 
