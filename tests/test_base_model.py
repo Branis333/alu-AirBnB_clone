@@ -5,7 +5,6 @@ import unittest
 import datetime
 import uuid
 
-from models import base_model 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
         self.base_model = BaseModel()
