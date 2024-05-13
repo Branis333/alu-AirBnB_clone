@@ -4,6 +4,8 @@ sys.path.append("path_to_parent_directory")
 import unittest
 import datetime
 import uuid
+from models.base_model import BaseModel
+
 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
