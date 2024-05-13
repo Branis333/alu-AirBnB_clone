@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import sys
-sys.path.append("path_to_parent_directory")
+import os
 import unittest
 import datetime
 import uuid
