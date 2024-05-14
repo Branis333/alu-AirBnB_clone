@@ -4,6 +4,7 @@
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """Place class inherits from BaseModel"""
 
@@ -21,4 +22,3 @@ class Place(BaseModel):
         self.latitude = kwargs.get('latitude', 0.0)
         self.longitude = kwargs.get('longitude', 0.0)
         self.amenity_ids = kwargs.get('amenity_ids', [])
-

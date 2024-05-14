@@ -5,6 +5,7 @@ import uuid
 
 import models
 
+
 class BaseModel:
     def __init__(self, *args, **kwargs):
         """
@@ -12,7 +13,7 @@ class BaseModel:
         """
         if kwargs:
             for key, value in kwargs.items():
-                if key == "created_at" or key == "updated_at":
+                if key == "created_at" or key == "update_at":
                     value = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
@@ -22,9 +23,9 @@ class BaseModel:
             self.updated_at = datetime.datetime.now()
 
     def __str__(self):
-        """ 
-        String representation of BaseModel
-        """
+       """ 
+       String representation of BaseModel
+       """
        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
 
