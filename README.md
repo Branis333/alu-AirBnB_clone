@@ -1,11 +1,12 @@
 #AirBnB clone - The console
 
-# This project aims to build the foundational elements for an AirBnB clone.
-# It focuses on creating a parent class called BaseModel responsible for instance initialization, serialization, and deserialization. 
-# The project will establish a simple flow for data management, moving between instances, dictionaries, JSON strings, and files. 
-# It involves creating various classes essential for AirBnB functionality, such as User, State, City, and Place, all inheriting from BaseModel.
-# Furthermore, a storage engine will be developed to manage data persistence, starting with a File storage implementation.
-# The project will include comprehensive unittests to ensure the correctness of all classes and the storage engine.
+# Project description
+1. This project aims to build the foundational elements for an AirBnB clone.
+2. It focuses on creating a parent class called BaseModel responsible for instance initialization, serialization, and deserialization. 
+3. The project will establish a simple flow for data management, moving between instances, dictionaries, JSON strings, and files. 
+4. It involves creating various classes essential for AirBnB functionality, such as User, State, City, and Place, all inheriting from BaseModel.
+5. Furthermore, a storage engine will be developed to manage data persistence, starting with a File storage implementation.
+6. The project will include comprehensive unittests to ensure the correctness of all classes and the storage engine.
 
 # How to Start the Command Interpreter
 To start the command interpreter, follow these steps:
