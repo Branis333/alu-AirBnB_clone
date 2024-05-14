@@ -14,10 +14,10 @@ class TestBaseModel(unittest.TestCase):
 
     def test_str(self):
         expected_str = "[{}] ({}) {}".format(
-        self.base_model.__class__.__name__,
-        self.base_model.id,
-        self.base_model.__dict__
-)
+         self.base_model.__class__.__name__,
+         self.base_model.id,
+         self.base_model.__dict__
+         )
         self.assertEqual(str(self.base_model), expected_str)
 
     def test_save(self):
@@ -31,9 +31,12 @@ class TestBaseModel(unittest.TestCase):
         expected_keys = ['id', 'created_at', 'updated_at', '__class__']
         for key in expected_keys:
             self.assertIn(key, result_dict)
-        self.assertEqual(result_dict['__class__'], self.base_model.__class__.__name__)
-        self.assertEqual(result_dict['created_at'], self.base_model.created_at.isoformat())
-        self.assertEqual(result_dict['updated_at'], self.base_model.updated_at.isoformat())
+        self.assertEqual(result_dict['__class__'], 
+            self.base_model.__class__.__name__)
+        self.assertEqual(result_dict['created_at'], 
+            self.base_model.created_at.isoformat())
+        self.assertEqual(result_dict['updated_at'],
+            self.base_model.updated_at.isoformat())
 
     def test_init_with_kwargs(self):
         new_id = str(uuid.uuid4())
@@ -48,7 +51,5 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(base_model.id, new_id)
         self.assertEqual(base_model.created_at, created_at)
         self.assertEqual(base_model.updated_at, updated_at)
-
 if __name__ == '__main__':
     unittest.main()
-
