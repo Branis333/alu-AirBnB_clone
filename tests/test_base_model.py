@@ -31,12 +31,12 @@ class TestBaseModel(unittest.TestCase):
         expected_keys = ['id', 'created_at', 'updated_at', '__class__']
         for key in expected_keys:
             self.assertIn(key, result_dict)
-        self.assertEqual(result_dict['__class__'], 
-            self.base_model.__class__.__name__)
-        self.assertEqual(result_dict['created_at'], 
-            self.base_model.created_at.isoformat())
+        self.assertEqual(result_dict['__class__'],
+                         self.base_model.__class__.__name__)
+        self.assertEqual(result_dict['created_at'],
+                         self.base_model.created_at.isoformat())
         self.assertEqual(result_dict['updated_at'],
-            self.base_model.updated_at.isoformat())
+                         self.base_model.updated_at.isoformat())
 
     def test_init_with_kwargs(self):
         new_id = str(uuid.uuid4())
