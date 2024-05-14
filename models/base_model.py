@@ -23,12 +23,11 @@ class BaseModel:
             self.created_at = datetime.datetime.now()
             self.updated_at = datetime.datetime.now()
 
-    def __str__(self):
-        """ 
+    def __str__(self): """ 
         String representation of BaseModel
         """
        return "[{}] ({}) {}".format(self.__class__.__name__,
-                                     self.id, self.__dict__)
+                                self.id, self.__dict__)
 
     def save(self):
         """ 
