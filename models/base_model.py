@@ -13,7 +13,7 @@ class BaseModel:
         """
         if kwargs:
             for key, value in kwargs.items():
-                if key == "created_at" or key == "update_at":
+                if key == "created_at" or key == "updated_at":
                     value = datetime.datetime.strptime(value,
                                                        "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
@@ -32,6 +32,7 @@ class BaseModel:
     def save(self):
 
         self.updated_at = datetime.datetime.now()
+        storage.save()
 
     def to_dict(self):
         """
