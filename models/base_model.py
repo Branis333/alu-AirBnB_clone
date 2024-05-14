@@ -25,14 +25,12 @@ class BaseModel:
 
     def __str__(self):
 
-       return "[{}] ({}) {}".format(self.__class__.__name__,
-                                self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+                                     self.id, self.__dict__)
 
     def save(self):
-        """ 
-        Updates the public instance attribute with current date time
-        """
-       self.updated_at = datetime.datetime.now()
+ 
+        self.updated_at = datetime.datetime.now()
 
     def to_dict(self):
         """
