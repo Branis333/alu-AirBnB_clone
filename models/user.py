@@ -16,4 +16,5 @@ class User(BaseModel):
 
     def __str__(self):
         """String representation of User"""
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, 
+                                     self.id, self.__dict__)
