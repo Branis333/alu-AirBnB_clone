@@ -3,6 +3,7 @@
 import unittest
 import datetime
 import uuid
+from models import base_model
 from models.base_model import BaseModel
 
 
