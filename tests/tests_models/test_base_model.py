@@ -3,6 +3,8 @@
 import unittest
 import datetime
 import uuid
+import sys
+sys.path.append('models')
 from models import base_model
 from models.base_model import BaseModel
 
