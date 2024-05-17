@@ -168,51 +168,72 @@ class HBNBCommand(cmd.Cmd):
             print(len(matches))
 
     def do_update(self, line):
-        """Updates an instance by adding or updating attribute.
-        """
-        if line == "" or line is None:
+        """Updates an instance by adding or updating attribute."""
+        if not line:
             print("** class name missing **")
             return
 
-        rex = r'^(\S+)(?:\s(\S+)(?:\s(\S+)(?:\s((?:"[^"]*")|(?:(\S)+)))?)?)?'
-        match = re.search(rex, line)
-        classname = match.group(1)
-        uid = match.group(2)
-        attribute = match.group(3)
-        value = match.group(4)
+        # Define a simpler regular expression pattern with named groups
+        rex = r'^(?P<classname>\S+)(?:\s+(?P<uid>\S+)(?:\s+(?P<attribute>\S+)(?:\s+(?P<value>.+))?)?)?$'
+        match = re.match(rex, line)
         if not match:
+            print("** invalid command format **")
+            return
+
+        # Extract named groups from the match object
+        classname = match.group('classname')
+        uid = match.group('uid')
+        attribute = match.group('attribute')
+        value = match.group('value')
+
+        # Check if class name is missing
+        if not classname:
             print("** class name missing **")
-        elif classname not in storage.classes():
+            return
+
+        # Check if class doesn't exist
+        if classname not in storage.classes():
             print("** class doesn't exist **")
-        elif uid is None:
+            return
+
+        # Check if instance id is missing
+        if not uid:
             print("** instance id missing **")
+            return
+
+        key = "{}.{}".format(classname, uid)
+
+        # Check if instance doesn't exist
+        if key not in storage.all():
+            print("** no instance found **")
+            return
+
+        # Check if attribute name is missing
+        if not attribute:
+            print("** attribute name missing **")
+            return
+
+        # Check if value is missing
+        if not value:
+            print("** value missing **")
+            return
+
+        # Convert value to appropriate type if needed
+        cast = None
+        if '.' in value:
+            cast = float
         else:
-            key = "{}.{}".format(classname, uid)
-            if key not in storage.all():
-                print("** no instance found **")
-            elif not attribute:
-                print("** attribute name missing **")
-            elif not value:
-                print("** value missing **")
-            else:
-                cast = None
-                if not re.search('^".*"$', value):
-                    if '.' in value:
-                        cast = float
-                    else:
-                        cast = int
-                else:
-                    value = value.replace('"', '')
-                attributes = storage.attributes()[classname]
-                if attribute in attributes:
-                    value = attributes[attribute](value)
-                elif cast:
-                    try:
-                        value = cast(value)
-                    except ValueError:
-                        pass  # fine, stay a string then
-                setattr(storage.all()[key], attribute, value)
-                storage.all()[key].save()
+            cast = int
+        if cast:
+            try:
+                value = cast(value)
+            except ValueError:
+                pass  # Fine, stay a string then
+
+        # Update the attribute and save the instance
+        setattr(storage.all()[key], attribute, value)
+        storage.all()[key].save()
+
 
 
 if __name__ == '__main__':
