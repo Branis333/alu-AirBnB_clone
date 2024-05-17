@@ -10,3 +10,7 @@ class User(BaseModel):
     password = ""
     first_name = ""
     last_name = ""
+
+    def __str__(self):
+        """String representation of User"""
+        return "[User] ({}) {}".format(self.id, self.user_data)
