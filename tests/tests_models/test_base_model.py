@@ -6,11 +6,17 @@ from datetime import datetime
 import time
 import uuid
 import sys
+import subprocess
+
+# Add pycodestyle directory to sys.path
+pycodestyle_path = os.path.abspath("path_to_pycodestyle")
+sys.path.append(pycodestyle_path)
 
 # Add parent directory to sys.path to import BaseModel
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 from models.base_model import BaseModel
+
 
 class TestBaseModel(unittest.TestCase):
     def setUp(self):
@@ -43,6 +49,11 @@ class TestBaseModel(unittest.TestCase):
             f.write("# This is base_model_4.py\n")
             f.write("print('base_model_4.py created successfully')\n")
 
+    def test_style_guide(self):
+        """Test compliance with PEP 8 style guide."""
+        result = subprocess.run(['flake8', 'models/base_model.py', 'tests/test_base_model.py'], stdout=subprocess.PIPE)
+        self.assertEqual(result.returncode, 0, msg="PEP 8 style violations found.")
+
     def test_file_exists(self):
         """Test if the files exist."""
         # Check if each file exists
@@ -59,11 +70,13 @@ class TestBaseModel(unittest.TestCase):
                 os.remove(file_path)
 
     def test_init(self):
+        """Test initialization of BaseModel attributes."""
         self.assertIsInstance(self.base_model.id, str)
         self.assertIsInstance(self.base_model.created_at, datetime)
         self.assertIsInstance(self.base_model.updated_at, datetime)
 
     def test_str(self):
+        """Test the __str__ method of BaseModel."""
         expected_str = "[{}] ({}) {}".format(
             self.base_model.__class__.__name__,
             self.base_model.id,
@@ -72,6 +85,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(str(self.base_model), expected_str)
 
     def test_save(self):
+        """Test the save method of BaseModel."""
         old_updated_at = self.base_model.updated_at
         time.sleep(1)
         self.base_model.save()
@@ -79,6 +93,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(self.base_model.updated_at, datetime)
 
     def test_to_dict(self):
+        """Test the to_dict method of BaseModel."""
         result_dict = self.base_model.to_dict()
         self.assertIsInstance(result_dict, dict)
         expected_keys = ['id', 'created_at', 'updated_at', '__class__']
@@ -89,6 +104,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(result_dict['updated_at'], self.base_model.updated_at.isoformat())
 
     def test_init_with_kwargs(self):
+        """Test initialization of BaseModel with keyword arguments."""
         new_id = str(uuid.uuid4())
         created_at = datetime.now()
         updated_at = datetime.now()
@@ -101,6 +117,21 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(base_model.id, new_id)
         self.assertEqual(base_model.created_at, created_at)
         self.assertEqual(base_model.updated_at, updated_at)
+
+    def test_documentation(self):
+        """Test if BaseModel and its methods have documentation strings."""
+        self.assertIsNotNone(BaseModel.__doc__)
+        self.assertIsNotNone(BaseModel.__init__.__doc__)
+        self.assertIsNotNone(BaseModel.__str__.__doc__)
+        self.assertIsNotNone(BaseModel.save.__doc__)
+        self.assertIsNotNone(BaseModel.to_dict.__doc__)
+
+    def test_style_guide(self):
+        """Test compliance with PEP 8 style guide."""
+        style = pycodestyle.StyleGuide(quiet=False)
+        result = style.check_files(["models/base_model.py"])
+        self.assertEqual(result.total_errors, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
