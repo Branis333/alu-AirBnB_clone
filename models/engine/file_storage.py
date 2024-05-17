@@ -50,7 +50,6 @@ class FileStorage:
                     class_name = value['__class__']
                     self.__objects[key] = globals()[class_name](**value)
 
-
     def classes(self):
         """Returns a dictionary of valid classes for the storage"""
         from models.base_model import BaseModel
@@ -70,4 +69,3 @@ class FileStorage:
             'Amenity': Amenity,
             'Review': Review
         }
-

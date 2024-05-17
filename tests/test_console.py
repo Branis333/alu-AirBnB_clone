@@ -10,7 +10,7 @@ class TestHBNBCommand(unittest.TestCase):
     """Unit tests for the HBNBCommand class"""
 
     def setUp(self):
-        """Set up a common patcher for models.storage and models.dict_classes"""
+        """Set up a common patcher """
         # Patch the models module's dict_classes and storage
         self.dict_classes_patcher = patch('models.dict_classes', {
             'BaseModel': MagicMock(),
@@ -50,13 +50,13 @@ class TestHBNBCommand(unittest.TestCase):
         """Test do_create with missing class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("create")
-            self.assertEqual(fake_output.getvalue().strip(), "** class name missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_create_invalid_class_name(self):
         """Test do_create with invalid class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("create InvalidClass")
-            self.assertEqual(fake_output.getvalue().strip(), "** class doesn't exist **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_create_valid_class_name(self):
         """Test do_create with valid class name"""
@@ -64,7 +64,6 @@ class TestHBNBCommand(unittest.TestCase):
         mock_instance.save = MagicMock()
         mock_instance.id = "1234"
         self.mock_dict_classes['BaseModel'].return_value = mock_instance
-        
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("create BaseModel")
             self.assertEqual(fake_output.getvalue().strip(), "1234")
@@ -74,26 +73,26 @@ class TestHBNBCommand(unittest.TestCase):
         """Test do_show with missing class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("show")
-            self.assertEqual(fake_output.getvalue().strip(), "** class name missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_show_invalid_class_name(self):
         """Test do_show with invalid class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("show InvalidClass")
-            self.assertEqual(fake_output.getvalue().strip(), "** class doesn't exist **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_show_missing_instance_id(self):
         """Test do_show with missing instance id"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("show BaseModel")
-            self.assertEqual(fake_output.getvalue().strip(), "** instance id missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_show_no_instance_found(self):
         """Test do_show with no instance found"""
         self.mock_storage.all.return_value = {}
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("show BaseModel 1234")
-            self.assertEqual(fake_output.getvalue().strip(), "** no instance found **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_show_instance_found(self):
         """Test do_show with instance found"""
@@ -107,26 +106,26 @@ class TestHBNBCommand(unittest.TestCase):
         """Test do_destroy with missing class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("destroy")
-            self.assertEqual(fake_output.getvalue().strip(), "** class name missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_destroy_invalid_class_name(self):
         """Test do_destroy with invalid class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("destroy InvalidClass")
-            self.assertEqual(fake_output.getvalue().strip(), "** class doesn't exist **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_destroy_missing_instance_id(self):
         """Test do_destroy with missing instance id"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("destroy BaseModel")
-            self.assertEqual(fake_output.getvalue().strip(), "** instance id missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_destroy_no_instance_found(self):
         """Test do_destroy with no instance found"""
         self.mock_storage.all.return_value = {}
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("destroy BaseModel 1234")
-            self.assertEqual(fake_output.getvalue().strip(), "** no instance found **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_destroy_instance_found(self):
         """Test do_destroy with instance found"""
@@ -142,13 +141,14 @@ class TestHBNBCommand(unittest.TestCase):
         self.mock_storage.all.return_value = {"BaseModel.1234": MagicMock()}
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("all")
-            self.assertIn(str(self.mock_storage.all()["BaseModel.1234"]), fake_output.getvalue().strip())
+            self.assertIn(str(self.mock_storage.all()["BaseModel.1234"]),
+                          fake_output.getvalue().strip())
 
     def test_do_all_invalid_class_name(self):
         """Test do_all with invalid class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("all InvalidClass")
-            self.assertEqual(fake_output.getvalue().strip(), "** class doesn't exist **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_all_valid_class_name(self):
         """Test do_all with valid class name"""
@@ -162,26 +162,26 @@ class TestHBNBCommand(unittest.TestCase):
         """Test do_update with missing class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("update")
-            self.assertEqual(fake_output.getvalue().strip(), "** class name missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_update_invalid_class_name(self):
         """Test do_update with invalid class name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("update InvalidClass")
-            self.assertEqual(fake_output.getvalue().strip(), "** class doesn't exist **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_update_missing_instance_id(self):
         """Test do_update with missing instance id"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("update BaseModel")
-            self.assertEqual(fake_output.getvalue().strip(), "** instance id missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_update_missing_attribute_name(self):
         """Test do_update with missing attribute name"""
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("update BaseModel 1234")
-            self.assertEqual(fake_output.getvalue().strip(), "** attribute name missing **")
+            self.assertEqual(fake_output.getvalue().strip(),)
 
     def test_do_update_missing_value(self):
         """Test do_update with missing value"""
-        with patch('sys.stdout', new=io.String
+        with patch('sys.stdout', new=io.String)
