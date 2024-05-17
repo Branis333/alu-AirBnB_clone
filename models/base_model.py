@@ -11,9 +11,7 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
-                    if isinstance(value, str):
-                        value = datetime.datetime.strptime
-                        (value, "%Y-%m-%dT%H:%M:%S.%f")
+                    if isinstance(value, str):value = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
                     setattr(self, key, value)
         else:
@@ -27,8 +25,7 @@ class BaseModel:
         """
         Returns string representation of BaseModel
         """
-        return "[{}] ({}) {}".format
-        (self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """
@@ -45,12 +42,8 @@ class BaseModel:
         new_dict['__class__'] = self.__class__.__name__
         new_dict['created_at'] = self.created_at.isoformat()
         new_dict['updated_at'] = self.updated_at.isoformat()
-<<<<<<< HEAD
-        return new_dic
-=======
 
         return new_dict
->>>>>>> d109e1c (update)
         """ 
         Adding attributes if they exist
         """
@@ -64,8 +57,6 @@ class BaseModel:
             new_dict['description'] = self.description
         if hasattr(self, 'city_id'):
             new_dict['city_id'] = self.city_id
-<<<<<<< HEAD
         return new_dict
-=======
-        return new_dict
->>>>>>> d109e1c (update)
+
+        
