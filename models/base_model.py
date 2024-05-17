@@ -11,7 +11,7 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
-                    if isinstance(value, str):  
+                    if isinstance(value, str):
                         value = datetime.datetime.strptime
                         (value, "%Y-%m-%dT%H:%M:%S.%f")
                 if key != "__class__":
