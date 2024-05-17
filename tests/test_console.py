@@ -142,7 +142,7 @@ class TestHBNBCommand(unittest.TestCase):
         with patch('sys.stdout', new=io.StringIO()) as fake_output:
             self.console.onecmd("all")
             self.assertIn(str(self.mock_storage.all()["BaseModel.1234"]),
-            fake_output.getvalue().strip())
+                          fake_output.getvalue().strip())
 
     def test_do_all_invalid_class_name(self):
         """Test do_all with invalid class name"""
