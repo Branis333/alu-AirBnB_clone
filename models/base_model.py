@@ -45,9 +45,7 @@ class BaseModel:
         new_dict['__class__'] = self.__class__.__name__
         new_dict['created_at'] = self.created_at.isoformat()
         new_dict['updated_at'] = self.updated_at.isoformat()
-<<<<<<< Updated upstream
-        return new_dict
-=======
+        return new_dic
         """ 
         Adding attributes if they exist
         """
@@ -62,4 +60,3 @@ class BaseModel:
         if hasattr(self, 'city_id'):
             new_dict['city_id'] = self.city_id
         return new_dict
->>>>>>> Stashed changes
