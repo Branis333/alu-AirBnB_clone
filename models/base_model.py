@@ -45,7 +45,12 @@ class BaseModel:
         new_dict['__class__'] = self.__class__.__name__
         new_dict['created_at'] = self.created_at.isoformat()
         new_dict['updated_at'] = self.updated_at.isoformat()
+<<<<<<< HEAD
         return new_dic
+=======
+
+        return new_dict
+>>>>>>> d109e1c (update)
         """ 
         Adding attributes if they exist
         """
@@ -59,4 +64,8 @@ class BaseModel:
             new_dict['description'] = self.description
         if hasattr(self, 'city_id'):
             new_dict['city_id'] = self.city_id
+<<<<<<< HEAD
         return new_dict
+=======
+        return new_dict
+>>>>>>> d109e1c (update)
