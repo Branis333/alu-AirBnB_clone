@@ -354,14 +354,6 @@
         "documentation": {}
     },
     {
-        "label": "HBNBCommand",
-        "importPath": "console",
-        "description": "console",
-        "isExtraImport": true,
-        "detail": "console",
-        "documentation": {}
-    },
-    {
         "label": "cmd",
         "kind": 6,
         "isExtraImport": true,
@@ -546,7 +538,25 @@
         "kind": 6,
         "importPath": "tests.test_console",
         "description": "tests.test_console",
-        "peekOfCode": "class TestHBNBCommand(unittest.TestCase):\n    \"\"\"Unit tests for the HBNBCommand class\"\"\"\n    def setUp(self):\n        \"\"\"Set up a common patcher \"\"\"\n        # Patch the models module's dict_classes and storage\n        self.dict_classes_patcher = patch('models.dict_classes', {\n            'BaseModel': MagicMock(),\n            'User': MagicMock(),\n            # Add other classes as needed\n        })",
+        "peekOfCode": "class TestHBNBCommand(unittest.TestCase):\n    \"\"\"Unit tests for the HBNBCommand class\"\"\"\n    def setUp(self):\n        \"\"\"Set up a common patcher \"\"\"\n        # Patch the models module's dict_classes and storage\n        self.dict_classes_patcher = patch('models.storage.all')\n        self.storage_patcher = patch('sys.stdout', new_callable=io.StringIO)\n        # Start the patches\n        self.mock_dict_classes = self.dict_classes_patcher.start()\n        self.mock_stdout = self.storage_patcher.start()",
+        "detail": "tests.test_console",
+        "documentation": {}
+    },
+    {
+        "label": "current_dir",
+        "kind": 5,
+        "importPath": "tests.test_console",
+        "description": "tests.test_console",
+        "peekOfCode": "current_dir = os.path.dirname(os.path.abspath(__file__))\n# Get the absolute path to the root directory of the project\nroot_dir = os.path.dirname(current_dir)\n# Add the root directory to the system path\nsys.path.append(root_dir)\n# Now you can import console.py\ntry:\n    from console import HBNBCommand\nexcept ModuleNotFoundError as e:\n    print(f\"Error: {e}\")",
+        "detail": "tests.test_console",
+        "documentation": {}
+    },
+    {
+        "label": "root_dir",
+        "kind": 5,
+        "importPath": "tests.test_console",
+        "description": "tests.test_console",
+        "peekOfCode": "root_dir = os.path.dirname(current_dir)\n# Add the root directory to the system path\nsys.path.append(root_dir)\n# Now you can import console.py\ntry:\n    from console import HBNBCommand\nexcept ModuleNotFoundError as e:\n    print(f\"Error: {e}\")\n    print(f\"Current directory: {current_dir}\")\n    print(f\"Root directory: {root_dir}\")",
         "detail": "tests.test_console",
         "documentation": {}
     },
