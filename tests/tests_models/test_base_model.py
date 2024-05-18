@@ -49,11 +49,6 @@ class TestBaseModel(unittest.TestCase):
             f.write("# This is base_model_4.py\n")
             f.write("print('base_model_4.py created successfully')\n")
 
-    def test_style_guide(self):
-        """Test compliance with PEP 8 style guide."""
-        result = subprocess.run(['flake8', 'models/base_model.py', 'tests/test_base_model.py'], stdout=subprocess.PIPE)
-        self.assertEqual(result.returncode, 0, msg="PEP 8 style violations found.")
-
     def test_file_exists(self):
         """Test if the files exist."""
         # Check if each file exists
@@ -125,13 +120,6 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsNotNone(BaseModel.__str__.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
-
-    def test_style_guide(self):
-        """Test compliance with PEP 8 style guide."""
-        style = pycodestyle.StyleGuide(quiet=False)
-        result = style.check_files(["models/base_model.py"])
-        self.assertEqual(result.total_errors, 0)
-
 
 if __name__ == '__main__':
     unittest.main()

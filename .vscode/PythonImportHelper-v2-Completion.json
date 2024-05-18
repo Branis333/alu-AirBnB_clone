@@ -1,0 +1,562 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "models.state",
+        "description": "models.state",
+        "isExtraImport": true,
+        "detail": "models.state",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "models.state",
+        "description": "models.state",
+        "isExtraImport": true,
+        "detail": "models.state",
+        "documentation": {}
+    },
+    {
+        "label": "City",
+        "importPath": "models.city",
+        "description": "models.city",
+        "isExtraImport": true,
+        "detail": "models.city",
+        "documentation": {}
+    },
+    {
+        "label": "City",
+        "importPath": "models.city",
+        "description": "models.city",
+        "isExtraImport": true,
+        "detail": "models.city",
+        "documentation": {}
+    },
+    {
+        "label": "Place",
+        "importPath": "models.place",
+        "description": "models.place",
+        "isExtraImport": true,
+        "detail": "models.place",
+        "documentation": {}
+    },
+    {
+        "label": "Place",
+        "importPath": "models.place",
+        "description": "models.place",
+        "isExtraImport": true,
+        "detail": "models.place",
+        "documentation": {}
+    },
+    {
+        "label": "Amenity",
+        "importPath": "models.amenity",
+        "description": "models.amenity",
+        "isExtraImport": true,
+        "detail": "models.amenity",
+        "documentation": {}
+    },
+    {
+        "label": "Amenity",
+        "importPath": "models.amenity",
+        "description": "models.amenity",
+        "isExtraImport": true,
+        "detail": "models.amenity",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "models.review",
+        "description": "models.review",
+        "isExtraImport": true,
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "models.review",
+        "description": "models.review",
+        "isExtraImport": true,
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "models",
+        "description": "models",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "FileStorage",
+        "importPath": "models.engine.file_storage",
+        "description": "models.engine.file_storage",
+        "isExtraImport": true,
+        "detail": "models.engine.file_storage",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "HBNBCommand",
+        "importPath": "console",
+        "description": "console",
+        "isExtraImport": true,
+        "detail": "console",
+        "documentation": {}
+    },
+    {
+        "label": "cmd",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cmd",
+        "description": "cmd",
+        "detail": "cmd",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "FileStorage",
+        "kind": 6,
+        "importPath": "models.engine.file_storage",
+        "description": "models.engine.file_storage",
+        "peekOfCode": "class FileStorage:\n    __file_path = \"file.json\"\n    __objects = {}\n    def all(self):\n        \"\"\"Returns the dictionary __objects\"\"\"\n        return self.__objects\n    def new(self, obj):\n        \"\"\"Sets in __objects the obj with key <obj class name>.id\"\"\"\n        key = obj.__class__.__name__ + \".\" + obj.id\n        self.__objects[key] = obj",
+        "detail": "models.engine.file_storage",
+        "documentation": {}
+    },
+    {
+        "label": "Amenity",
+        "kind": 6,
+        "importPath": "models.amenity",
+        "description": "models.amenity",
+        "peekOfCode": "class Amenity(BaseModel):\n    \"\"\"Class for managing amenity objects\"\"\"\n    name = \"\"",
+        "detail": "models.amenity",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class BaseModel:\n    \"\"\"\n    BaseModel class\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        \"\"\"\n        Initializes BaseModel\n        \"\"\"\n        if kwargs:\n            for key, value in kwargs.items():",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "City",
+        "kind": 6,
+        "importPath": "models.city",
+        "description": "models.city",
+        "peekOfCode": "class City(BaseModel):\n    \"\"\"Class for managing city objects\"\"\"\n    state_id = \"\"\n    name = \"\"",
+        "detail": "models.city",
+        "documentation": {}
+    },
+    {
+        "label": "Place",
+        "kind": 6,
+        "importPath": "models.place",
+        "description": "models.place",
+        "peekOfCode": "class Place(BaseModel):\n    \"\"\"Class for managing place objects\"\"\"\n    city_id = \"\"\n    user_id = \"\"\n    name = \"\"\n    description = \"\"\n    number_rooms = 0\n    number_bathrooms = 0\n    max_guest = 0\n    price_by_night = 0",
+        "detail": "models.place",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "kind": 6,
+        "importPath": "models.review",
+        "description": "models.review",
+        "peekOfCode": "class Review(BaseModel):\n    \"\"\"Class for managing review objects\"\"\"\n    place_id = \"\"\n    user_id = \"\"\n    text = \"\"\n    def to_dict(self):\n        \"\"\"\n        Converts instance attributes to dictionary\n        \"\"\"\n        new_dict = self.__dict__.copy()",
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "kind": 6,
+        "importPath": "models.state",
+        "description": "models.state",
+        "peekOfCode": "class State(BaseModel):\n    \"\"\"Class for managing state objects\"\"\"\n    name = \"\"",
+        "detail": "models.state",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models.user",
+        "description": "models.user",
+        "peekOfCode": "class User(BaseModel):\n    \"\"\"Class for managing user objects\"\"\"\n    email = \"\"\n    password = \"\"\n    first_name = \"\"\n    last_name = \"\"\n    def __str__(self):\n        \"\"\"String representation of User\"\"\"\n        return \"[User] ({}) {}\".format(self.id, self.user_data)",
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "TestFileStorage",
+        "kind": 6,
+        "importPath": "tests.tests_models.tests_engine.test_file_storage",
+        "description": "tests.tests_models.tests_engine.test_file_storage",
+        "peekOfCode": "class TestFileStorage(unittest.TestCase):\n    def setUp(self):\n        self.storage = FileStorage()\n    def test_all(self):\n        # Test if all returns the dictionary __objects\n        objects = self.storage.all()\n        self.assertIsInstance(objects, dict)\n    def test_new(self):\n        # Test if new sets the object correctly in __objects\n        obj = BaseModel()",
+        "detail": "tests.tests_models.tests_engine.test_file_storage",
+        "documentation": {}
+    },
+    {
+        "label": "TestAmenity",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_amenity",
+        "description": "tests.tests_models.test_amenity",
+        "peekOfCode": "class TestAmenity(unittest.TestCase):\n    def setUp(self):\n        \"\"\"Set up an instance of Amenity for testing\"\"\"\n        self.amenity = Amenity()\n    def test_inheritance(self):\n        \"\"\"Test that Amenity inherits from BaseModel\"\"\"\n        self.assertIsInstance(self.amenity, BaseModel)\n    def test_name_attr(self):\n        \"\"\"Test that Amenity has a class attribute 'name' initialized as an empty string\"\"\"\n        self.assertTrue(hasattr(Amenity, 'name'))",
+        "detail": "tests.tests_models.test_amenity",
+        "documentation": {}
+    },
+    {
+        "label": "TestBaseModel",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_base_model",
+        "description": "tests.tests_models.test_base_model",
+        "peekOfCode": "class TestBaseModel(unittest.TestCase):\n    def setUp(self):\n        # Initialize the base_model attribute\n        self.base_model = BaseModel()\n        # Assign file paths\n        self.file_path_1 = \"base_model_1.py\"\n        self.file_path_2 = \"base_model_2.py\"\n        self.file_path_3 = \"base_model_3.py\"\n        self.file_path_4 = \"base_model_4.py\"\n        # Create base_model_1.py",
+        "detail": "tests.tests_models.test_base_model",
+        "documentation": {}
+    },
+    {
+        "label": "pycodestyle_path",
+        "kind": 5,
+        "importPath": "tests.tests_models.test_base_model",
+        "description": "tests.tests_models.test_base_model",
+        "peekOfCode": "pycodestyle_path = os.path.abspath(\"path_to_pycodestyle\")\nsys.path.append(pycodestyle_path)\n# Add parent directory to sys.path to import BaseModel\nsys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))\nfrom models.base_model import BaseModel\nclass TestBaseModel(unittest.TestCase):\n    def setUp(self):\n        # Initialize the base_model attribute\n        self.base_model = BaseModel()\n        # Assign file paths",
+        "detail": "tests.tests_models.test_base_model",
+        "documentation": {}
+    },
+    {
+        "label": "TestCity",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_city",
+        "description": "tests.tests_models.test_city",
+        "peekOfCode": "class TestCity(unittest.TestCase):\n    def setUp(self):\n        \"\"\"Set up an instance of City for testing\"\"\"\n        self.city = City()\n    def test_inheritance(self):\n        \"\"\"Test that City inherits from BaseModel\"\"\"\n        self.assertIsInstance(self.city, BaseModel)\n    def test_state_id_attr(self):\n        \"\"\"Test that City has a class attribute 'state_id' initialized as an empty string\"\"\"\n        self.assertTrue(hasattr(City, 'state_id'))",
+        "detail": "tests.tests_models.test_city",
+        "documentation": {}
+    },
+    {
+        "label": "TestPlace",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_place",
+        "description": "tests.tests_models.test_place",
+        "peekOfCode": "class TestPlace(unittest.TestCase):\n    def setUp(self):\n        \"\"\"Set up an instance of Place for testing\"\"\"\n        self.place = Place()\n    def test_inheritance(self):\n        \"\"\"Test that Place inherits from BaseModel\"\"\"\n        self.assertIsInstance(self.place, BaseModel)\n    def test_city_id_attr(self):\n        \"\"\"Test that Place has a class attribute 'city_id' initialized as an empty string\"\"\"\n        self.assertTrue(hasattr(Place, 'city_id'))",
+        "detail": "tests.tests_models.test_place",
+        "documentation": {}
+    },
+    {
+        "label": "TestReview",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_review",
+        "description": "tests.tests_models.test_review",
+        "peekOfCode": "class TestReview(unittest.TestCase):\n    def setUp(self):\n        \"\"\"Set up an instance of Review for testing\"\"\"\n        self.review = Review()\n    def test_inheritance(self):\n        \"\"\"Test that Review inherits from BaseModel\"\"\"\n        self.assertIsInstance(self.review, BaseModel)\n    def test_place_id_attr(self):\n        \"\"\"Test that Review has a class attribute 'place_id' initialized as an empty string\"\"\"\n        self.assertTrue(hasattr(Review, 'place_id'))",
+        "detail": "tests.tests_models.test_review",
+        "documentation": {}
+    },
+    {
+        "label": "TestState",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_state",
+        "description": "tests.tests_models.test_state",
+        "peekOfCode": "class TestState(unittest.TestCase):\n    def setUp(self):\n        \"\"\"Set up an instance of State for testing\"\"\"\n        self.state = State()\n    def test_inheritance(self):\n        \"\"\"Test that State inherits from BaseModel\"\"\"\n        self.assertIsInstance(self.state, BaseModel)\n    def test_name_attr(self):\n        \"\"\"Test that State has a class attribute 'name' initialized as an empty string\"\"\"\n        self.assertTrue(hasattr(State, 'name'))",
+        "detail": "tests.tests_models.test_state",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_user",
+        "description": "tests.tests_models.test_user",
+        "peekOfCode": "class User(BaseModel):\n    \"\"\"User class that inherits from BaseModel\"\"\"\n    def __init__(self, *args, **kwargs):\n        \"\"\"Initialize User instance\"\"\"\n        super().__init__(*args, **kwargs)\n        self.email = kwargs.get('email', '')\n        self.password = kwargs.get('password', '')\n        self.first_name = kwargs.get('first_name', '')\n        self.last_name = kwargs.get('last_name', '')\n        self.id = kwargs.get('id', str(uuid.uuid4()))",
+        "detail": "tests.tests_models.test_user",
+        "documentation": {}
+    },
+    {
+        "label": "TestUser",
+        "kind": 6,
+        "importPath": "tests.tests_models.test_user",
+        "description": "tests.tests_models.test_user",
+        "peekOfCode": "class TestUser(unittest.TestCase):\n    def setUp(self):\n        self.user_data = {\n            'email': 'test@example.com',\n            'password': 'password123',\n            'first_name': 'Daniel',\n            'last_name': 'Show'\n        }\n        self.user = User(**self.user_data)\n    def test_user_attributes(self):",
+        "detail": "tests.tests_models.test_user",
+        "documentation": {}
+    },
+    {
+        "label": "TestHBNBCommand",
+        "kind": 6,
+        "importPath": "tests.test_console",
+        "description": "tests.test_console",
+        "peekOfCode": "class TestHBNBCommand(unittest.TestCase):\n    \"\"\"Unit tests for the HBNBCommand class\"\"\"\n    def setUp(self):\n        \"\"\"Set up a common patcher \"\"\"\n        # Patch the models module's dict_classes and storage\n        self.dict_classes_patcher = patch('models.dict_classes', {\n            'BaseModel': MagicMock(),\n            'User': MagicMock(),\n            # Add other classes as needed\n        })",
+        "detail": "tests.test_console",
+        "documentation": {}
+    },
+    {
+        "label": "HBNBCommand",
+        "kind": 6,
+        "importPath": "console",
+        "description": "console",
+        "peekOfCode": "class HBNBCommand(cmd.Cmd):\n    \"\"\"Class for the command interpreter.\"\"\"\n    prompt = \"(hbnb) \"\n    def default(self, line):\n        \"\"\"Catch commands if nothing else matches then.\"\"\"\n        # print(\"DEF:::\", line)\n        self._precmd(line)\n    def _precmd(self, line):\n        \"\"\"Intercepts commands to test for class.syntax()\"\"\"\n        # print(\"PRECMD:::\", line)",
+        "detail": "console",
+        "documentation": {}
+    }
+]

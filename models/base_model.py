@@ -4,6 +4,9 @@ import models
 
 
 class BaseModel:
+    """
+    BaseModel class
+    """
     def __init__(self, *args, **kwargs):
         """
         Initializes BaseModel
