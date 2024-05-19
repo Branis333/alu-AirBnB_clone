@@ -67,5 +67,4 @@ class FileStorage:
             'State': State,
             'City': City,
             'Amenity': Amenity,
-            'Review': Review
-        }
+            'Review': Review}
